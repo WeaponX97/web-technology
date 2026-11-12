@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workshop Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="box">
+
+    <div class="left">
+      <h1>Join our<br>Coding Workshop</h1>
+      <p>Fill in your details and grab your seat. It takes less than a minute.</p>
+    </div>
+
+    <div class="right">
+
+      <form id="regForm" novalidate>
+        <h2>Register</h2>
+
+        <label>Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name">
+        <span class="error" id="nameErr"></span>
+
+        <label>Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+        <span class="error" id="emailErr"></span>
+
+        <div class="row">
+          <div>
+            <label>Phone</label>
+            <input type="text" id="phone" name="phone" placeholder="10 digit number">
+            <span class="error" id="phoneErr"></span>
+          </div>
+          <div>
+            <label>Date of Birth</label>
+            <input type="date" id="dob" name="dob">
+            <span class="error" id="dobErr"></span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label>College / Institute</label>
+            <input type="text" id="college" name="college" placeholder="College name">
+            <span class="error" id="collegeErr"></span>
+          </div>
+          <div>
+            <label>Year of Study</label>
+            <select id="year" name="year">
+              <option value="">Select year</option>
+              <option>1st Year</option>
+              <option>2nd Year</option>
+              <option>3rd Year</option>
+              <option>4th Year</option>
+            </select>
+            <span class="error" id="yearErr"></span>
+          </div>
+        </div>
+
+        <label>Gender</label>
+        <div class="radios">
+          <label><input type="radio" name="gender" value="Male"> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+        <span class="error" id="genderErr"></span>
+
+        <label>Course</label>
+        <select id="course" name="course">
+          <option value="">Select a course</option>
+          <option>Web Development</option>
+          <option>Python Basics</option>
+          <option>Data Science</option>
+          <option>Cyber Security</option>
+        </select>
+        <span class="error" id="courseErr"></span>
+
+        <label>Skills You Know</label>
+        <div class="radios">
+          <label><input type="checkbox" name="skills[]" value="HTML/CSS"> HTML/CSS</label>
+          <label><input type="checkbox" name="skills[]" value="JavaScript"> JavaScript</label>
+          <label><input type="checkbox" name="skills[]" value="Python"> Python</label>
+          <label><input type="checkbox" name="skills[]" value="Java"> Java</label>
+        </div>
+        <span class="error" id="skillsErr"></span>
+
+        <label>Address</label>
+        <textarea id="address" name="address" rows="3" placeholder="Your address"></textarea>
+        <span class="error" id="addressErr"></span>
+
+        <label class="terms">
+          <input type="checkbox" id="terms" name="terms"> I confirm that the details above are correct
+        </label>
+        <span class="error" id="termsErr"></span>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div id="result"></div>
+
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
